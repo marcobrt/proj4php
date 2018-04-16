@@ -491,7 +491,7 @@ class Proj4php
 
         self::reportDebug(sprintf("Transform result %s %s\r\n", $point->x, $point->y));
 
-        // Nov 2014 - changed Werner Schäffer
+        // Nov 2014 - changed Werner Schï¿½ffer
         // Clone point to avoid a lot of problems
         return (clone $point);
     }
@@ -501,7 +501,7 @@ class Proj4php
      * destination coordinate system definition.
      * point to transform in geodetic coordinates (long, lat, height).
      */
-    public function datum_transform(Datum $source, Datum $dest, Point $point)
+    public function datum_transform(Datum $source, Datum $dest, $point)
     {
         // Short cut if the datums are identical.
         if ($source->compare_datums($dest)) {

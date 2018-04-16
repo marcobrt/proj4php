@@ -81,7 +81,7 @@ class Proj
     public $localCS = false;
 
     // Proj4php injected object.
-    protected $proj4php;
+    public $proj4php;
 
     /**
      * The supplied Spatial Reference System (SRS) code supplied
@@ -407,7 +407,7 @@ class Proj
      * @param Point $point
      * @return Point
      */
-    public function forward(Point $point)
+    public function forward($point)
     {
         return $this->projection->forward($point);
     }
@@ -416,7 +416,7 @@ class Proj
      * @param Point $point
      * @return Point
      */
-    public function inverse(Point $point)
+    public function inverse($point)
     {
         return $this->projection->inverse($point);
     }
